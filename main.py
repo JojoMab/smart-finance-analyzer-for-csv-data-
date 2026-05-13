@@ -6,7 +6,7 @@ from datetime import datetime
 
 SCRIPT_ORDNER = os.path.dirname(os.path.abspath(__file__))
 CSV_DATEI = input("Name der CSV-Datei eingeben [transactions.csv]: ").strip() or "transactions.csv"
-REPORT_DATEI = input("Name der Report-Datei eingeben [namederDatei.txt]: ").strip() or "report.txt"
+REPORT_DATEI = input("Name der Report-Datei eingeben [report.txt]: ").strip() or "report.txt"
 CSV_DATEI = os.path.join(SCRIPT_ORDNER, CSV_DATEI)
 REPORT_DATEI = os.path.join(SCRIPT_ORDNER, REPORT_DATEI)
 TRENNLINIE = "=" * 60
