@@ -2,6 +2,10 @@
 
 Smart Finance Analyzer ist ein CLI-basiertes Python-Tool zur Analyse persönlicher Finanzdaten aus CSV-Dateien. Das Programm liest Transaktionen ein, berechnet Einnahmen, Ausgaben, Monatsbilanzen und eine einfache Prognose und erstellt daraus automatisch einen strukturierten Finanzbericht.
 
+## GitHub-Beschreibung
+
+Interaktiver Python-Finanzanalyzer für CSV-Transaktionen mit Monatsbilanzen, Kategorienanalyse und Prognose.
+
 ## Kurzprofil für Recruiter
 
 - Thema: Finanzdaten, CSV-Verarbeitung, Reporting und einfache Prognose
@@ -49,11 +53,13 @@ Smart Finance Analyzer wird gestartet...
 ✓ 12 Monate analysiert. Prognose: 1355.83 €
 ```
 
-Ein längerer Terminal-Mitschnitt liegt hier:
+## Beispiele im Repository
 
-```txt
-examples/terminal_output.txt
-```
+Die Beispielausgaben sind bewusst versioniert, damit Recruiter das Ergebnis direkt auf GitHub prüfen können, ohne das Projekt lokal auszuführen:
+
+- [Terminal-Mitschnitt](examples/terminal_output.txt)
+
+Der Mitschnitt zeigt die interaktive Eingabe, die wichtigsten Kennzahlen und die erfolgreiche Report-Erstellung.
 
 ## Eingabeformat
 
@@ -87,6 +93,7 @@ Standardmäßig wird der Report unter `report.txt` gespeichert. Diese Datei ist 
 ├── main.py
 ├── transactions.csv
 ├── examples/
+│   ├── README.md
 │   └── terminal_output.txt
 └── README.md
 ```
