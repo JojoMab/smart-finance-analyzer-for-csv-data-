@@ -1,0 +1,30 @@
+$ python3 main.py
+Name der CSV-Datei eingeben [transactions.csv]:
+Name der Report-Datei eingeben [report.txt]:
+
+============================================================
+  Smart Finance Analyzer wird gestartet...
+============================================================
+
+  [1/5] Lade Transaktionen aus CSV...
+  ✓ 132 Transaktionen erfolgreich geladen.
+
+  [2/5] Berechne Gesamtübersicht...
+  ✓ Einnahmen: 37140.00 € | Ausgaben: 20870.00 € | Überschuss: 16270.00 €
+
+  [3/5] Analysiere Ausgaben nach Kategorien...
+  ✓ 12 Kategorien gefunden: Miete, Lebensmittel, Freizeit, Sparen, Versicherung, Mobilität, Internet, Kleidung, Telefon, Bildung, Geschenke, Gesundheit
+
+  [4/5] Berechne Monatsbilanzen und Prognose...
+  ✓ 12 Monate analysiert. Prognose: 1355.83 €
+
+  [5/5] Erstelle und speichere Report...
+
+  Voraussichtlicher Überschuss: +1355.83 €
+  ✓ Gut! Solider finanzieller Puffer erwartet.
+
+  ✓ Report wurde gespeichert: 'report.txt'
+
+============================================================
+  Analyse abgeschlossen!
+============================================================

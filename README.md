@@ -1,96 +1,104 @@
 # Smart Finance Analyzer
 
-Ein CLI-basiertes Python-Tool zur Analyse persönlicher Finanzdaten aus
-CSV-Dateien.\
-Das Programm erstellt automatisch einen strukturierten Finanzbericht
-inklusive Auswertung und einfacher Prognose.
+Smart Finance Analyzer ist ein CLI-basiertes Python-Tool zur Analyse persönlicher Finanzdaten aus CSV-Dateien. Das Programm liest Transaktionen ein, berechnet Einnahmen, Ausgaben, Monatsbilanzen und eine einfache Prognose und erstellt daraus automatisch einen strukturierten Finanzbericht.
 
-------------------------------------------------------------------------
+## Kurzprofil für Recruiter
 
-## Overview
+- Thema: Finanzdaten, CSV-Verarbeitung, Reporting und einfache Prognose
+- Technologie: Python-Standardbibliothek, interaktives CLI, Textreport
+- Eingabe: realistische Beispieltransaktionen in `transactions.csv`
+- Ausgabe: vollständiger Finanzbericht als Terminalausgabe und Textdatei
+- Fokus: saubere Datenvalidierung, strukturierte Auswertung und nachvollziehbare Ergebnisse
 
-Der Smart Finance Analyzer verarbeitet Transaktionen aus einer CSV-Datei
-und generiert daraus einen übersichtlichen Bericht.
+## Funktionen
 
-Dabei werden: - Einnahmen und Ausgaben berechnet - Ausgaben nach
-Kategorien analysiert - Monatsbilanzen erstellt - eine Prognose für den
-nächsten Monat berechnet
+- Transaktionen aus CSV-Dateien laden und validieren
+- Gesamteinnahmen, Gesamtausgaben und Netto-Überschuss berechnen
+- Ausgaben nach Kategorien sortieren
+- Monatsbilanzen erstellen
+- Prognose für den nächsten Monat berechnen
+- Fehler bei fehlenden Dateien, falschen Spalten oder ungültigen Beträgen abfangen
+- Textreport automatisch speichern
 
-Das Tool ist bewusst einfach gehalten und kommt ohne externe
-Bibliotheken aus.
+## Schnellstart
 
-------------------------------------------------------------------------
+Projekt aus dem Repository-Root starten:
 
-## Features
-
--   Gesamtübersicht (Einnahmen, Ausgaben, Überschuss)
--   Analyse der Ausgaben nach Kategorien
--   Monatliche Finanzübersicht
--   Prognose basierend auf Durchschnittswerten
--   Robustes Fehlerhandling
--   Automatische Erstellung eines Text-Reports
-
-------------------------------------------------------------------------
-
-## Project Structure
-
-    .
-    ├── main.py
-    ├── transactions.csv
-    └── report.txt
-
-------------------------------------------------------------------------
-
-## Input Format
-
-Die CSV-Datei muss folgende Spalten enthalten:
-
-    month,type,amount,category
-
-### Beispiel
-
-    Januar,income,2500,Gehalt
-    Januar,expense,800,Miete
-    Februar,expense,200,Lebensmittel
-
-------------------------------------------------------------------------
-
-## Usage
-
-Programm starten:
-
-``` bash
-python main.py
+```bash
+python3 main.py
 ```
 
-Anschließend: - CSV-Datei auswählen (Default: transactions.csv) - Namen
-für den Report festlegen (Default: report.txt)
+Danach können die Standardwerte einfach mit Enter bestätigt werden:
 
-------------------------------------------------------------------------
+```txt
+Name der CSV-Datei eingeben [transactions.csv]:
+Name der Report-Datei eingeben [report.txt]:
+```
 
-## Output
+Erwartete Terminalausgabe:
 
-Der generierte Report enthält: - Gesamtübersicht - Kategorienanalyse mit
-Prozentwerten - Monatsbilanzen - Prognose für den nächsten Monat
+```txt
+Smart Finance Analyzer wird gestartet...
+[1/5] Lade Transaktionen aus CSV...
+✓ 132 Transaktionen erfolgreich geladen.
+[2/5] Berechne Gesamtübersicht...
+✓ Einnahmen: 37140.00 € | Ausgaben: 20870.00 € | Überschuss: 16270.00 €
+[3/5] Analysiere Ausgaben nach Kategorien...
+✓ 12 Kategorien gefunden: Miete, Lebensmittel, Freizeit, Sparen, Versicherung, Mobilität, Internet, Kleidung, Telefon, Bildung, Geschenke, Gesundheit
+[4/5] Berechne Monatsbilanzen und Prognose...
+✓ 12 Monate analysiert. Prognose: 1355.83 €
+```
 
-------------------------------------------------------------------------
+Ein längerer Terminal-Mitschnitt liegt hier:
 
-## Tech Stack
+```txt
+examples/terminal_output.txt
+```
 
--   Python 3
--   Standardbibliotheken (`csv`, `os`, `collections`, `datetime`)
+## Eingabeformat
 
-------------------------------------------------------------------------
+Die CSV-Datei benötigt diese Spalten:
 
-## Design Goals
+```csv
+month,type,amount,category
+Januar,income,2850.00,Gehalt
+Januar,expense,820.00,Miete
+Januar,expense,345.00,Lebensmittel
+```
 
--   Klare und verständliche Struktur
--   Keine externen Abhängigkeiten
--   Fokus auf Datenverarbeitung
--   Gute Erweiterbarkeit
+`type` muss entweder `income` oder `expense` sein.
 
-------------------------------------------------------------------------
+## Ausgaben
 
-## License
+Der generierte Report enthält:
 
-Frei nutzbar für Lern- und private Zwecke.
+- Gesamtübersicht mit Einnahmen, Ausgaben und Netto-Überschuss
+- Kategorienanalyse mit Prozentwerten
+- Monatsbilanzen
+- Prognose für den nächsten Monat
+- Hinweis, ob ein positiver finanzieller Puffer erwartet wird
+
+Standardmäßig wird der Report unter `report.txt` gespeichert. Diese Datei ist generiert und wird nicht versioniert.
+
+## Projektstruktur
+
+```txt
+.
+├── main.py
+├── transactions.csv
+├── examples/
+│   └── terminal_output.txt
+└── README.md
+```
+
+## Technische Ziele
+
+- keine externen Abhängigkeiten
+- klar lesbare Python-Funktionen
+- robuste CSV-Validierung
+- nachvollziehbare Berechnungsschritte
+- einfache Bedienung über das Terminal
+
+## Bewerbungsbezug
+
+Das Projekt zeigt grundlegende, aber saubere Datenverarbeitung mit Python: Einlesen von CSV-Daten, Validierung, Aggregation, Report-Erstellung und einfache Prognose. Durch die realistischen Beispieltransaktionen ist das Ergebnis für Recruiter direkt nachvollziehbar, ohne dass das Projekt ausgeführt werden muss.
