@@ -1,111 +1,67 @@
-# Smart Finance Analyzer
+# Smart Finance CSV Analyzer
 
-Smart Finance Analyzer is an interactive Python CLI for analyzing personal finance data from CSV files. The program reads transactions, calculates income, expenses, monthly balances and a simple forecast, then creates a structured financial report.
+Python-Projekt zur Analyse synthetischer Finanzdaten mit Budgetampel, Validierung und Report-Ausgabe fuer Finanz-/Versicherungs-IT.
 
-## GitHub Description
+## Kurzprofil fuer Recruiter
 
-Interactive Python finance analyzer for CSV transactions with monthly balances, category analysis and forecasting.
+Dieses Repository ist ein Bewerberprojekt fuer duale Studiengaenge in Wirtschaftsinformatik, Informatik, Data Science und KI-nahen Themen. Es nutzt synthetische Daten, eine bewusst einfache Projektstruktur und nachvollziehbare Reports, damit fachliche und technische Grundlagen schnell erkennbar sind.
 
-## Recruiter Snapshot
+## Bewerbungsbezug
 
-- Topic: financial data, CSV processing, reporting and simple forecasting
-- Technology: Python standard library, interactive CLI, text report
-- Input: realistic sample transactions in `transactions.csv`
-- Output: full financial report in the terminal and as a text file
-- Focus: clean data validation, structured analysis and traceable results
+Das Projekt zeigt Finanzdatenanalyse, Kategorienauswertung, Plausibilitaetspruefung, Budgetampel und Reporting.
 
-## Features
+## Passende Zielunternehmen
 
-- load and validate transactions from CSV files
-- calculate total income, total expenses and net surplus
-- rank expenses by category
-- create monthly balances
-- forecast the next month
-- handle missing files, missing columns and invalid amounts
-- save the report automatically
+Allianz, Atruvia, Finanz Informatik, Generali, Bayerische Versorgungskammer und BG-Phoenics.
 
-## Quick Start
+## Tech Stack
 
-Run the project from the repository root:
+- Python 3
+- CSV-Verarbeitung
+- regelbasierte Analyse und einfache Kennzahlen
+- Unit Tests mit unittest
+- GitHub Actions CI
+
+## Funktionen
+
+- synthetische CSV-Daten laden
+- Eingabedaten validieren
+- Kennzahlen berechnen
+- Risiken oder Prioritaeten einstufen
+- Report als Text ausgeben
+- Beispielausgabe versionieren
+
+## Projektstruktur
+
+```txt
+smart-finance-analyzer-for-csv-data-/
+├── main.py
+├── data/
+├── docs/
+│   ├── application_fit.md
+│   └── recruiter_summary_de.md
+├── examples/
+│   └── terminal_output.txt
+├── tests/
+└── .github/workflows/python-ci.yml
+```
+
+## Schnellstart
 
 ```bash
 python3 main.py
 ```
 
-Confirm the default values with Enter:
+## Tests
 
-```txt
-Enter CSV file name [transactions.csv]:
-Enter report file name [report.txt]:
+```bash
+python3 -m unittest discover -s tests
 ```
 
-Expected terminal output:
+## Hinweis
 
-```txt
-Smart Finance Analyzer starting...
-[1/5] Loading transactions from CSV...
-✓ 132 transactions loaded.
-[2/5] Calculating financial summary...
-✓ Income: 37140.00 EUR | Expenses: 20870.00 EUR | Surplus: 16270.00 EUR
-[3/5] Analyzing expense categories...
-✓ 12 categories found: Rent, Groceries, Leisure, Savings, Insurance, Mobility, Internet, Clothing, Phone, Education, Gifts, Health
-[4/5] Calculating monthly balances and forecast...
-✓ 12 months analyzed. Forecast: 1355.83 EUR
-```
+Alle Daten sind synthetisch. Das Projekt bildet kein echtes Unternehmenssystem ab und behauptet keine echte Praxiserfahrung.
 
-## Examples
+## English Summary
 
-The example outputs are versioned intentionally so recruiters can inspect the result directly on GitHub without running the project locally:
-
-- [Terminal output](examples/terminal_output.txt)
-
-The terminal output shows the interactive input, key financial KPIs and successful report creation.
-
-## Input Format
-
-The CSV file needs these columns:
-
-```csv
-month,type,amount,category
-January,income,2850.00,Salary
-January,expense,820.00,Rent
-January,expense,345.00,Groceries
-```
-
-`type` must be either `income` or `expense`.
-
-## Outputs
-
-The generated report contains:
-
-- financial summary with income, expenses and net surplus
-- category analysis with percentages
-- monthly balances
-- next-month forecast
-- note on whether a positive financial buffer is expected
-
-By default, the report is saved as `report.txt`. This file is generated and not versioned.
-
-## Project Structure
-
-```txt
-.
-├── main.py
-├── transactions.csv
-├── examples/
-│   ├── README.md
-│   └── terminal_output.txt
-└── README.md
-```
-
-## Technical Goals
-
-- no external dependencies
-- clear Python functions
-- robust CSV validation
-- traceable calculation steps
-- simple terminal usage
-
-## Portfolio Relevance
-
-This project demonstrates clean foundational data processing with Python: CSV import, validation, aggregation, report generation and simple forecasting. The realistic sample transactions make the result easy for recruiters to understand without running the project.
+Applicant portfolio project using synthetic data to demonstrate basic software structure, data processing, reporting and business/IT understanding.
