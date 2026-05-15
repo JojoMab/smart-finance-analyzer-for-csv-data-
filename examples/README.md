@@ -1,9 +1,9 @@
-# Beispiele
+# Examples
 
-Dieses Verzeichnis ist Teil des Repositorys, damit Recruiter die Terminalausgabe direkt auf GitHub sehen können.
+This directory is part of the repository so recruiters can inspect the terminal output directly on GitHub.
 
-## Dateien
+## Files
 
-- `terminal_output.txt`: Beispielausgabe von `python3 main.py` mit Standardwerten
+- `terminal_output.txt`: example output from `python3 main.py` using the default inputs
 
-Die generierte Datei `report.txt` wird nicht versioniert. Das Beispiel zeigt die wichtigsten Kennzahlen aus den realistischen Transaktionsdaten in `transactions.csv`.
+The generated `report.txt` file is not versioned. The example shows the key KPIs from the realistic transaction data in `transactions.csv`.

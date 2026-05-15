@@ -1,92 +1,92 @@
 # Smart Finance Analyzer
 
-Smart Finance Analyzer ist ein CLI-basiertes Python-Tool zur Analyse persönlicher Finanzdaten aus CSV-Dateien. Das Programm liest Transaktionen ein, berechnet Einnahmen, Ausgaben, Monatsbilanzen und eine einfache Prognose und erstellt daraus automatisch einen strukturierten Finanzbericht.
+Smart Finance Analyzer is an interactive Python CLI for analyzing personal finance data from CSV files. The program reads transactions, calculates income, expenses, monthly balances and a simple forecast, then creates a structured financial report.
 
-## GitHub-Beschreibung
+## GitHub Description
 
-Interaktiver Python-Finanzanalyzer für CSV-Transaktionen mit Monatsbilanzen, Kategorienanalyse und Prognose.
+Interactive Python finance analyzer for CSV transactions with monthly balances, category analysis and forecasting.
 
-## Kurzprofil für Recruiter
+## Recruiter Snapshot
 
-- Thema: Finanzdaten, CSV-Verarbeitung, Reporting und einfache Prognose
-- Technologie: Python-Standardbibliothek, interaktives CLI, Textreport
-- Eingabe: realistische Beispieltransaktionen in `transactions.csv`
-- Ausgabe: vollständiger Finanzbericht als Terminalausgabe und Textdatei
-- Fokus: saubere Datenvalidierung, strukturierte Auswertung und nachvollziehbare Ergebnisse
+- Topic: financial data, CSV processing, reporting and simple forecasting
+- Technology: Python standard library, interactive CLI, text report
+- Input: realistic sample transactions in `transactions.csv`
+- Output: full financial report in the terminal and as a text file
+- Focus: clean data validation, structured analysis and traceable results
 
-## Funktionen
+## Features
 
-- Transaktionen aus CSV-Dateien laden und validieren
-- Gesamteinnahmen, Gesamtausgaben und Netto-Überschuss berechnen
-- Ausgaben nach Kategorien sortieren
-- Monatsbilanzen erstellen
-- Prognose für den nächsten Monat berechnen
-- Fehler bei fehlenden Dateien, falschen Spalten oder ungültigen Beträgen abfangen
-- Textreport automatisch speichern
+- load and validate transactions from CSV files
+- calculate total income, total expenses and net surplus
+- rank expenses by category
+- create monthly balances
+- forecast the next month
+- handle missing files, missing columns and invalid amounts
+- save the report automatically
 
-## Schnellstart
+## Quick Start
 
-Projekt aus dem Repository-Root starten:
+Run the project from the repository root:
 
 ```bash
 python3 main.py
 ```
 
-Danach können die Standardwerte einfach mit Enter bestätigt werden:
+Confirm the default values with Enter:
 
 ```txt
-Name der CSV-Datei eingeben [transactions.csv]:
-Name der Report-Datei eingeben [report.txt]:
+Enter CSV file name [transactions.csv]:
+Enter report file name [report.txt]:
 ```
 
-Erwartete Terminalausgabe:
+Expected terminal output:
 
 ```txt
-Smart Finance Analyzer wird gestartet...
-[1/5] Lade Transaktionen aus CSV...
-✓ 132 Transaktionen erfolgreich geladen.
-[2/5] Berechne Gesamtübersicht...
-✓ Einnahmen: 37140.00 € | Ausgaben: 20870.00 € | Überschuss: 16270.00 €
-[3/5] Analysiere Ausgaben nach Kategorien...
-✓ 12 Kategorien gefunden: Miete, Lebensmittel, Freizeit, Sparen, Versicherung, Mobilität, Internet, Kleidung, Telefon, Bildung, Geschenke, Gesundheit
-[4/5] Berechne Monatsbilanzen und Prognose...
-✓ 12 Monate analysiert. Prognose: 1355.83 €
+Smart Finance Analyzer starting...
+[1/5] Loading transactions from CSV...
+✓ 132 transactions loaded.
+[2/5] Calculating financial summary...
+✓ Income: 37140.00 EUR | Expenses: 20870.00 EUR | Surplus: 16270.00 EUR
+[3/5] Analyzing expense categories...
+✓ 12 categories found: Rent, Groceries, Leisure, Savings, Insurance, Mobility, Internet, Clothing, Phone, Education, Gifts, Health
+[4/5] Calculating monthly balances and forecast...
+✓ 12 months analyzed. Forecast: 1355.83 EUR
 ```
 
-## Beispiele im Repository
+## Examples
 
-Die Beispielausgaben sind bewusst versioniert, damit Recruiter das Ergebnis direkt auf GitHub prüfen können, ohne das Projekt lokal auszuführen:
+The example outputs are versioned intentionally so recruiters can inspect the result directly on GitHub without running the project locally:
 
-- [Terminal-Mitschnitt](examples/terminal_output.txt)
+- [Terminal output](examples/terminal_output.txt)
 
-Der Mitschnitt zeigt die interaktive Eingabe, die wichtigsten Kennzahlen und die erfolgreiche Report-Erstellung.
+The terminal output shows the interactive input, key financial KPIs and successful report creation.
 
-## Eingabeformat
+## Input Format
 
-Die CSV-Datei benötigt diese Spalten:
+The CSV file needs these columns:
 
 ```csv
 month,type,amount,category
-Januar,income,2850.00,Gehalt
-Januar,expense,820.00,Miete
-Januar,expense,345.00,Lebensmittel
+January,income,2850.00,Salary
+January,expense,820.00,Rent
+January,expense,345.00,Groceries
 ```
 
-`type` muss entweder `income` oder `expense` sein.
+`type` must be either `income` or `expense`.
 
-## Ausgaben
+## Outputs
 
-Der generierte Report enthält:
+The generated report contains:
 
-- Gesamtübersicht mit Einnahmen, Ausgaben und Netto-Überschuss
-- Kategorienanalyse mit Prozentwerten
-- Monatsbilanzen
-- Prognose für den nächsten Monat
-- Hinweis, ob ein positiver finanzieller Puffer erwartet wird
+- financial summary with income, expenses and net surplus
+- category analysis with percentages
+- monthly balances
+- next-month forecast
+- note on whether a positive financial buffer is expected
 
-Standardmäßig wird der Report unter `report.txt` gespeichert. Diese Datei ist generiert und wird nicht versioniert.
+By default, the report is saved as `report.txt`. This file is generated and not versioned.
 
-## Projektstruktur
+## Project Structure
 
 ```txt
 .
@@ -98,14 +98,14 @@ Standardmäßig wird der Report unter `report.txt` gespeichert. Diese Datei ist 
 └── README.md
 ```
 
-## Technische Ziele
+## Technical Goals
 
-- keine externen Abhängigkeiten
-- klar lesbare Python-Funktionen
-- robuste CSV-Validierung
-- nachvollziehbare Berechnungsschritte
-- einfache Bedienung über das Terminal
+- no external dependencies
+- clear Python functions
+- robust CSV validation
+- traceable calculation steps
+- simple terminal usage
 
-## Bewerbungsbezug
+## Portfolio Relevance
 
-Das Projekt zeigt grundlegende, aber saubere Datenverarbeitung mit Python: Einlesen von CSV-Daten, Validierung, Aggregation, Report-Erstellung und einfache Prognose. Durch die realistischen Beispieltransaktionen ist das Ergebnis für Recruiter direkt nachvollziehbar, ohne dass das Projekt ausgeführt werden muss.
+This project demonstrates clean foundational data processing with Python: CSV import, validation, aggregation, report generation and simple forecasting. The realistic sample transactions make the result easy for recruiters to understand without running the project.
