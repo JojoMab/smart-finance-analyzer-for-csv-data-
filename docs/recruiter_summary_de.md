@@ -2,7 +2,7 @@
 
 ## Kurzbeschreibung
 
-Python-Projekt zur Analyse synthetischer Finanzdaten mit Budgetampel, Validierung und Report-Ausgabe fuer Finanz-/Versicherungs-IT.
+Python-Projekt zur Analyse synthetischer Finanzdaten mit Budgetampel, Validierung und Report-Ausgabe für Finanz-/Versicherungs-IT.
 
 ## Sichtbare Kompetenzen
 

@@ -1,0 +1,12 @@
+Smart Finance Analyzer Monatsreport
+===================================
+
+Gesamtausgaben: 7525.00 EUR
+Budgetampel: ROT
+
+Kategorien
+admin: 1590.00 EUR
+claims: 1675.00 EUR
+it-services: 1420.00 EUR
+operations: 1335.00 EUR
+sales: 1505.00 EUR

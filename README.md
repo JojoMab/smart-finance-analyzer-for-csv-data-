@@ -1,67 +1,71 @@
-# Smart Finance CSV Analyzer
+# Smart Finance Analyzer
 
-Python-Projekt zur Analyse synthetischer Finanzdaten mit Budgetampel, Validierung und Report-Ausgabe fuer Finanz-/Versicherungs-IT.
+![Python CI](https://github.com/JojoMab/smart-finance-analyzer-for-csv-data-/actions/workflows/python-ci.yml/badge.svg)
 
-## Kurzprofil fuer Recruiter
+Dieses Bewerberprojekt analysiert synthetische Finanzdaten aus CSV-Dateien. Es validiert Buchungen, berechnet eine Budgetampel, wertet Ausgaben nach Kategorien aus und erzeugt einen Monatsreport.
 
-Dieses Repository ist ein Bewerberprojekt fuer duale Studiengaenge in Wirtschaftsinformatik, Informatik, Data Science und KI-nahen Themen. Es nutzt synthetische Daten, eine bewusst einfache Projektstruktur und nachvollziehbare Reports, damit fachliche und technische Grundlagen schnell erkennbar sind.
+## Bewerbungskontext
 
-## Bewerbungsbezug
-
-Das Projekt zeigt Finanzdatenanalyse, Kategorienauswertung, Plausibilitaetspruefung, Budgetampel und Reporting.
-
-## Passende Zielunternehmen
-
-Allianz, Atruvia, Finanz Informatik, Generali, Bayerische Versorgungskammer und BG-Phoenics.
+Das Projekt passt zu dualen Studiengängen in Wirtschaftsinformatik, Informatik und Finanz-IT. Es ist relevant für Allianz, Generali, Atruvia, Finanz Informatik und Bayerische Versorgungskammer.
 
 ## Tech Stack
 
-- Python 3
+- Python 3.11
 - CSV-Verarbeitung
-- regelbasierte Analyse und einfache Kennzahlen
-- Unit Tests mit unittest
-- GitHub Actions CI
+- Datenvalidierung
+- Budgetampel
+- Unit Tests
+- GitHub Actions
 
 ## Funktionen
 
-- synthetische CSV-Daten laden
-- Eingabedaten validieren
-- Kennzahlen berechnen
-- Risiken oder Prioritaeten einstufen
-- Report als Text ausgeben
-- Beispielausgabe versionieren
+- synthetische Transaktionen laden
+- Pflichtfelder, Beträge und Datumsformat prüfen
+- Kategorienanalyse durchführen
+- Budgetstatus ROT/GELB/GRÜN berechnen
+- Monatsreport als TXT erzeugen
 
 ## Projektstruktur
 
 ```txt
 smart-finance-analyzer-for-csv-data-/
 ├── main.py
-├── data/
-├── docs/
-│   ├── application_fit.md
-│   └── recruiter_summary_de.md
-├── examples/
-│   └── terminal_output.txt
+├── validator.py
+├── budget_analyzer.py
+├── category_analyzer.py
+├── report_generator.py
+├── data/transaction_data.csv
 ├── tests/
-└── .github/workflows/python-ci.yml
+└── docs/
 ```
 
 ## Schnellstart
 
 ```bash
-python3 main.py
+python main.py
 ```
 
 ## Tests
 
 ```bash
-python3 -m unittest discover -s tests
+python -m unittest discover -s tests -v
 ```
 
-## Hinweis
+## Beispielausgabe
 
-Alle Daten sind synthetisch. Das Projekt bildet kein echtes Unternehmenssystem ab und behauptet keine echte Praxiserfahrung.
+```txt
+Smart Finance Analyzer abgeschlossen.
+Report: reports/monthly_report.txt
+```
+
+## Hinweis zum Repository-Namen
+
+Der aktuelle Repository-Name endet technisch bedingt mit einem Bindestrich. Für die öffentliche Wirkung wird eine Umbenennung in `smart-finance-analyzer` empfohlen.
+
+## Hinweis auf synthetische Daten
+
+Alle Buchungen sind synthetisch. Das Projekt verarbeitet keine echten Finanzdaten.
 
 ## English Summary
 
-Applicant portfolio project using synthetic data to demonstrate basic software structure, data processing, reporting and business/IT understanding.
+Smart Finance Analyzer is an applicant portfolio project for CSV-based financial data analysis. It demonstrates validation, budget status logic, category analysis and reporting with synthetic data.
