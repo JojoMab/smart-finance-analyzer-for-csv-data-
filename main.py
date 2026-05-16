@@ -1,8 +1,16 @@
 import csv
 from dataclasses import dataclass
 
+import pandas as pd
+
 from budget_analyzer import budget_status as calculate_budget_status
 from report_generator import create_monthly_report
+from src.visualizer import (
+    plot_budget_gauge,
+    plot_expense_share_pie,
+    plot_expenses_by_category,
+    plot_monthly_balance,
+)
 from validator import validate_transaction
 
 
@@ -35,8 +43,21 @@ def load_transactions(path="data/transaction_data.csv"):
 def main():
     transactions = load_transactions()
     report_path = create_monthly_report(transactions)
+    df = pd.DataFrame(transactions)
+    df["amount"] = df["amount"].astype(float)
+    if "type" not in df.columns:
+        df["type"] = "EXPENSE"
+    total_expenses = df[df["type"].astype(str).str.upper() == "EXPENSE"]["amount"].sum()
+    charts_dir = "charts"
+
+    plot_expenses_by_category(df, charts_dir)
+    plot_monthly_balance(df, charts_dir)
+    plot_budget_gauge(total_expenses, budget=1500.0, output_dir=charts_dir)
+    plot_expense_share_pie(df, charts_dir)
+
     print("Smart Finance Analyzer abgeschlossen.")
     print(f"Report: {report_path}")
+    print("Diagramme gespeichert in: charts/")
 
 
 if __name__ == "__main__":

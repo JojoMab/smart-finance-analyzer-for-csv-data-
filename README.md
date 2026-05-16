@@ -1,6 +1,6 @@
-# Smart Finance Analyzer
-
 ![Python CI](https://github.com/JojoMab/smart-finance-analyzer-for-csv-data-/actions/workflows/python-ci.yml/badge.svg)
+
+# Smart Finance Analyzer
 
 Dieses Bewerberprojekt analysiert synthetische Finanzdaten aus CSV-Dateien. Es validiert Buchungen, berechnet eine Budgetampel, wertet Ausgaben nach Kategorien aus und erzeugt einen Monatsreport.
 
@@ -45,7 +45,7 @@ smart-finance-analyzer-for-csv-data-/
 python main.py
 ```
 
-## Tests
+## Tests ausführen
 
 ```bash
 python -m unittest discover -s tests -v
@@ -58,13 +58,24 @@ Smart Finance Analyzer abgeschlossen.
 Report: reports/monthly_report.txt
 ```
 
+## Diagramme
+
+Das Projekt erstellt beim Ausführen automatisch vier Diagramme im Ordner `charts/`:
+
+| Diagramm | Datei | Inhalt |
+|---|---|---|
+| Ausgaben nach Kategorie | `charts/ausgaben_kategorien.png` | Balkendiagramm der Ausgaben je Kategorie |
+| Monatliche Bilanz | `charts/monatliche_bilanz.png` | Einnahmen und Ausgaben im Monatsverlauf |
+| Budgetauslastung | `charts/budget_auslastung.png` | Visueller Verbrauchsstand zum gesetzten Budget |
+| Ausgabenverteilung | `charts/ausgaben_verteilung.png` | Kreisdiagramm der Kategorienanteile |
+
 ## Hinweis zum Repository-Namen
 
 Der aktuelle Repository-Name endet technisch bedingt mit einem Bindestrich. Für die öffentliche Wirkung wird eine Umbenennung in `smart-finance-analyzer` empfohlen.
 
 ## Hinweis auf synthetische Daten
 
-Alle Buchungen sind synthetisch. Das Projekt verarbeitet keine echten Finanzdaten.
+Alle Daten sind synthetisch und dienen ausschließlich der Demonstration.
 
 ## English Summary
 
