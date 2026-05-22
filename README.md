@@ -8,7 +8,7 @@ Dieses Bewerberprojekt analysiert synthetische Finanzdaten aus CSV-Dateien. Es v
 
 Das Projekt passt zu dualen Studiengängen in Wirtschaftsinformatik, Informatik und Finanz-IT. Es ist relevant für Allianz, Generali, Atruvia, Finanz Informatik und Bayerische Versorgungskammer.
 
-## Tech Stack
+## Technologie-Stack
 
 - Python 3.11
 - pandas
@@ -83,6 +83,6 @@ Alle Daten sind synthetisch und dienen ausschließlich der Demonstration.
 
 Dieses Projekt ist ein Bewerberprojekt und nicht für den produktiven Einsatz vorgesehen.
 
-## English Summary
+## Kurzfassung
 
-Smart Finance Analyzer is an applicant portfolio project for CSV-based financial data analysis. It demonstrates validation, budget status logic, category analysis and reporting with synthetic data.
+Der Smart Finance Analyzer ist ein Bewerberprojekt zur CSV-basierten Finanzdatenanalyse. Es zeigt Validierung, Budgetampel, Kategorieauswertung, Reporting und Diagramme auf Basis synthetischer Daten.
