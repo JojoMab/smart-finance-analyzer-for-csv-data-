@@ -1,1 +1,3 @@
-Report generated successfully.
+Smart Finance Analyzer abgeschlossen.
+Report: reports/monthly_report.txt
+Diagramme gespeichert in: charts/

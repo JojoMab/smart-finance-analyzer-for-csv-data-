@@ -1,9 +1,7 @@
 import csv
-from dataclasses import dataclass
 
 import pandas as pd
 
-from budget_analyzer import budget_status as calculate_budget_status
 from report_generator import create_monthly_report
 from src.visualizer import (
     plot_budget_gauge,
@@ -12,23 +10,6 @@ from src.visualizer import (
     plot_monthly_balance,
 )
 from validator import validate_transaction
-
-
-@dataclass
-class Transaction:
-    category: str
-    amount: float
-    budget: float
-
-
-def budget_status(transaction):
-    status = calculate_budget_status(float(transaction.amount), float(transaction.budget))
-    return {"ROT": "red", "GELB": "yellow", "GRÜN": "green"}[status]
-
-
-def risk_score(transaction):
-    remaining_ratio = (float(transaction.budget) - float(transaction.amount)) / float(transaction.budget)
-    return max(0, round((1 - remaining_ratio) * 10, 2))
 
 
 def load_transactions(path="data/transaction_data.csv"):
@@ -48,11 +29,12 @@ def main():
     if "type" not in df.columns:
         df["type"] = "EXPENSE"
     total_expenses = df[df["type"].astype(str).str.upper() == "EXPENSE"]["amount"].sum()
+    budget = float(transactions[0]["budget"]) if transactions else 0.0
     charts_dir = "charts"
 
     plot_expenses_by_category(df, charts_dir)
     plot_monthly_balance(df, charts_dir)
-    plot_budget_gauge(total_expenses, budget=1500.0, output_dir=charts_dir)
+    plot_budget_gauge(total_expenses, budget=budget, output_dir=charts_dir)
     plot_expense_share_pie(df, charts_dir)
 
     print("Smart Finance Analyzer abgeschlossen.")

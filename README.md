@@ -11,6 +11,9 @@ Das Projekt passt zu dualen Studiengängen in Wirtschaftsinformatik, Informatik 
 ## Tech Stack
 
 - Python 3.11
+- pandas
+- matplotlib
+- seaborn
 - CSV-Verarbeitung
 - Datenvalidierung
 - Budgetampel
@@ -42,13 +45,14 @@ smart-finance-analyzer-for-csv-data-/
 ## Schnellstart
 
 ```bash
+python -m pip install -r requirements.txt
 python main.py
 ```
 
 ## Tests ausführen
 
 ```bash
-python -m unittest discover -s tests -v
+python -m pytest tests/ -v
 ```
 
 ## Beispielausgabe
@@ -76,6 +80,8 @@ Der aktuelle Repository-Name endet technisch bedingt mit einem Bindestrich. Für
 ## Hinweis auf synthetische Daten
 
 Alle Daten sind synthetisch und dienen ausschließlich der Demonstration.
+
+Dieses Projekt ist ein Bewerberprojekt und nicht für den produktiven Einsatz vorgesehen.
 
 ## English Summary
 
